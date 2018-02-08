@@ -5,23 +5,23 @@
 
 # deepfakes_faceswap
 
-Faceswap is a tool that utilizes deep learning to recognize and swap faces in pictures and videos.
+Faceswap是一个利用深度学习识别图片和视频中的人脸并能进行交换人脸的工具
 
-## Overview
+## 概述
 The project has multiple entry points. You will have to:
- - Gather photos (or use the one provided in the training data provided below)
- - **Extract** faces from your raw photos
- - **Train** a model on your photos (or use the one provided in the training data provided below)
- - **Convert** your sources with the model
+ - 生成图片 (或者使用下面提供的训练数据)
+ - 从原始图片中提取（**Extract**） 人脸
+ - 使用图片训练（**Train**）一个模型 (或者使用下面提供的训练数据)
+ - 使用生成的模型转换(**Convert**) sources中的图片
 
 ### Extract
-From your setup folder, run `python faceswap.py extract`. This will take photos from `src` folder and extract faces into `extract` folder.
+从你的安装目录, 运行`python faceswap.py extract`. 该命令会从`src`文件中的图片提取出人脸导出到`extract`文件夹.
 
 ### Train
-From your setup folder, run `python faceswap.py train`. This will take photos from two folders containing pictures of both faces and train a model that will be saved inside the `models` folder.
+从软件安装目录，运行`python faceswap.py train`进行训练，训练时从两个包含人脸的图片目录中的图片训练模型并将生成的模型保存到`models`目录。
 
 ### Convert
-From your setup folder, run `python faceswap.py convert`. This will take photos from `original` folder and apply new faces into `modified` folder.
+从软件安装目录, 运行 `python faceswap.py convert`. 该命令会将`original`目录中图片替换人脸并将新生成的图片保存到`modified`目录.
 
 #### General notes:
 - All of the scripts mentioned have `-h`/`--help` options with a arguments that they will accept. You're smart, you can figure out how this works, right?!
